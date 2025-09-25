@@ -67,10 +67,16 @@ button {
 @font-face {
   font-family: monster_semibold;
   src: url(./Montserrat/static/Montserrat-SemiBold.ttf);
+}
+@font-face {
   font-family: moster_regular;
   src: url(./Montserrat/static/Montserrat-Regular.ttf);
+}
+@font-face {
   font-family: moster_medium;
   src: url(./Montserrat/static/Montserrat-Medium.ttf);
+}
+@font-face {
   font-family: moster_italic;
   src: url(./Montserrat/static/Montserrat-Italic.ttf);
 }
