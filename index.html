@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edeco Wow</title>
+    <!-- Too Jo Nahi Hai  -->
+    <!-- ✅ Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- ✅ GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- ✅ GSAP ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  </head>
+  <body class="overflow-x-hidden">
+    <nav
+      class="w-screen fixed top-0 left-0 flex items-center justify-between py-4 px-6 md:px-20 shadow-lg bg-white z-[9999]"
+    >
+      <!-- Logo -->
+      <div class="logo">
+        <img
+          src="./images/eldeco-log.png"
+          class="w-[137px] h-[27px]"
+          alt="Eldeco-Wow"
+        />
+      </div>
+
+      <!-- Menu for Desktop -->
+      <div class="hidden md:flex">
+        <ul
+          class="flex font-[400] text-[16px] justify-between items-center gap-[40px]"
+        >
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Amenities</a></li>
+          <li><a href="#">Floor Plans</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Location</a></li>
+        </ul>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="hidden md:block">
+        <button
+          style="font-family: moster_medium"
+          class="w-[168px] h-[48px] bg-[#114D72] border border-[#114D72] text-white font-[500] text-[16px] hover:bg-white hover:text-black cursor-pointer hover:border-[#114D72]"
+        >
+          Enquiry Now
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="focus:outline-none">
+          <!-- Hamburger SVG -->
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobile-menu"
+      class="fixed top-0 left-0 w-screen h-screen bg-white flex flex-col justify-center items-center space-y-6 transform -translate-y-full opacity-0 z-[9998]"
+    >
+      <button
+        id="mobile-menu-close"
+        class="absolute top-6 right-6 focus:outline-none"
+      >
+        <!-- Cross SVG -->
+        <svg
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <ul class="flex flex-col font-[400] text-[20px] items-center gap-8">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Amenities</a></li>
+        <li><a href="#">Floor Plans</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Location</a></li>
+      </ul>
+      <button
+        style="font-family: moster_medium"
+        class="w-[168px] h-[48px] bg-[#114D72] border border-[#114D72] text-white font-[500] text-[16px] hover:bg-white hover:text-black cursor-pointer hover:border-[#114D72]"
+      >
+        Enquiry Now
+      </button>
+    </div>
+
+    <!-- The Main Section Is Starting From Here  -->
+    <main class="mt-20">
+      <section
+        class="sec1 w-screen h-screen relative"
+        style="
+          background-image: url(./images/s1/hero-banner.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        "
+      ></section>
+
+      <!-- The Section 2 Is Starting From Here  -->
+      <section
+        class="sec2 pt-14 w-screen min-h-[10vh] flex flex-col items-center gap-14 md:gap-24 px-4 md:px-0"
+      >
+        <!-- Top Heading Div  -->
+        <div
+          class="w-full md:w-[65%] flex flex-col md:gap-[24px] text-center justify-center items-center"
+        >
+          <h2
+            style="font-family: moster_semibold"
+            class="font-[600] text-3xl md:text-[48px] text-black"
+          >
+            Key highlights
+          </h2>
+          <p
+            style="font-family: moster_regular"
+            class="font-[400] text-[#00000099] text-base md:text-[18px] mt-4"
+          >
+            3 BHK & Limited Duplex Residences set inside a thoughtfully planned
+            community with a 35,000 sq ft clubhouse, sports arenas, and lush
+            podium greens.
+          </p>
+        </div>
+
+        <!-- Main Image -->
+        <div class="w-full">
+          <img
+            src="./images/s2/sec2_img.png"
+            class="w-full h-auto"
+            alt="Key highlights"
+          />
+        </div>
+      </section>
+
+      <!-- The Section 3 Is Starting From Here  -->
+      <section class="s3 w-screen py-16 px-4 md:pl-20">
+        <div
+          class="contentDiv md:pl-24 flex flex-col md:flex-row justify-between items-center gap-8 h-auto md:h-[546px] w-full"
+        >
+          <!-- List -->
+          <div
+            class="list w-full md:w-[733px] h-auto md:h-[475px] bg-[#F7F7F7] flex flex-col md:flex-col items-center md:items-start pl-0 md:pl-8 py-4 md:py-8"
+          >
+            <ul
+              class="flex flex-col gap-4 w-full"
+              style="font-family: moster_regular"
+            >
+              <li
+                class="min-h-[48px] w-full md:w-[432px] bg-white font-[400] flex items-center text-[16px] md:text-[20px] text-black px-3"
+              >
+                <div class="flex gap-2">
+                  <p>01.</p>
+                  <p>G+32 towers | Podium-level living</p>
+                </div>
+              </li>
+
+              <li
+                class="min-h-[48px] w-full flex items-center md:w-[467px] bg-white font-[400] text-[16px] md:text-[20px] text-black px-3"
+              >
+                <div class="flex gap-2">
+                  <p>02.</p>
+                  <p>Spacious 3 BHK formats & limited duplexes</p>
+                </div>
+              </li>
+
+              <li
+                class="min-h-[48px] w-full flex items-center md:w-[553px] bg-white font-[400] text-[16px] md:text-[20px] text-black px-3"
+              >
+                <div class="flex gap-2">
+                  <p>03.</p>
+                  <p>Modern construction tech for superior finish & speed</p>
+                </div>
+              </li>
+
+              <li
+                class="min-h-[48px] w-full flex items-center md:w-[582px] bg-white font-[400] text-[16px] md:text-[20px] text-black px-3"
+              >
+                <div class="flex gap-2">
+                  <p>04.</p>
+                  <p>Clubhouse with pool, courts, fitness & co-working zones</p>
+                </div>
+              </li>
+
+              <li
+                class="min-h-[48px] w-full flex items-center md:w-[586px] bg-white font-[400] text-[16px] md:text-[20px] text-black px-3"
+              >
+                <div class="flex gap-2">
+                  <p>05.</p>
+                  <p>Secure, access-controlled community with 24×7 services</p>
+                </div>
+              </li>
+
+              <li
+                class="min-h-[48px] w-full flex items-center md:w-[693px] bg-white font-[400] text-[16px] md:text-[20px] text-black px-3"
+              >
+                <div class="flex gap-2">
+                  <p>06.</p>
+                  <p>
+                    Excellent connectivity via Yamuna Expressway; quick access
+                    to key employment & lifestyle hubs
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Image -->
+          <div class="img w-full md:w-[562px] h-auto md:h-full mt-6 md:mt-0">
+            <img
+              class="w-full h-auto object-contain"
+              src="./images/s2/girl.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="s4 w-screen min-h-[20vh] bg-gradient-to-r from-[#5A9FC9] to-[#114D72] flex flex-col items-center justify-center py-16"
+      >
+        <!-- Top Heading Div -->
+        <div class="flex w-full justify-center items-center text-center">
+          <h2
+            style="font-family: moster_medium"
+            class="font-[500] text-[28px] sm:text-[32px] md:text-[36px] text-white"
+          >
+            Why it works <br />
+            (for families & investors)
+          </h2>
+        </div>
+
+        <!-- Slider -->
+        <div class="relative w-full py-10">
+          <div
+            id="slider"
+            class="flex overflow-x-auto md:overflow-hidden scroll-smooth gap-4 transition-transform duration-500"
+          >
+            <!-- Card Template -->
+            <div
+              class="flex flex-col items-center bg-white text-black h-auto md:h-[478px] min-w-[80%] sm:min-w-[45%] md:min-w-[38.3333%] w-[598px] md:w-[598px] overflow-hidden"
+            >
+              <img
+                src="./images/slider/slideri1.png"
+                class="w-full h-auto md:h-[408px]"
+                alt=""
+              />
+              <div class="w-full md:w-[428px] text-center p-2">
+                <p
+                  style="font-family: moster_regular"
+                  class="font-[400] text-[16px] sm:text-[18px] md:text-[20px] text-black"
+                >
+                  Large, usable podium greens (kids play, pet-friendly pockets,
+                  sit-outs)
+                </p>
+              </div>
+            </div>
+
+            <!-- Repeat cards with same responsive classes -->
+            <div
+              class="flex flex-col items-center bg-white text-black h-auto md:h-[478px] min-w-[80%] sm:min-w-[45%] md:min-w-[38.3333%] w-[598px] md:w-[598px] overflow-hidden"
+            >
+              <img
+                src="./images/slider/slideri2.png"
+                class="w-full h-auto md:h-[408px]"
+                alt=""
+              />
+              <div class="w-full md:w-[428px] text-center p-2">
+                <p
+                  style="font-family: moster_regular"
+                  class="font-[400] text-[16px] sm:text-[18px] md:text-[20px] text-black"
+                >
+                  Large, usable podium greens (kids play, pet-friendly pockets,
+                  sit-outs)
+                </p>
+              </div>
+            </div>
+
+            <!-- Add remaining cards similarly -->
+
+            <!-- Card Template -->
+            <div
+              class="flex flex-col items-center bg-white text-black h-auto md:h-[478px] min-w-[80%] sm:min-w-[45%] md:min-w-[38.3333%] w-[598px] md:w-[598px] overflow-hidden"
+            >
+              <img
+                src="./images/slider/slideri3.png"
+                class="w-full h-auto md:h-[408px]"
+                alt=""
+              />
+              <div class="w-full md:w-[428px] text-center p-2">
+                <p
+                  style="font-family: moster_regular"
+                  class="font-[400] text-[16px] sm:text-[18px] md:text-[20px] text-black"
+                >
+                  Large, usable podium greens (kids play, pet-friendly pockets,
+                  sit-outs)
+                </p>
+              </div>
+            </div>
+
+            <!-- Repeat cards with same responsive classes -->
+            <div
+              class="flex flex-col items-center bg-white text-black h-auto md:h-[478px] min-w-[80%] sm:min-w-[45%] md:min-w-[38.3333%] w-[598px] md:w-[598px] overflow-hidden"
+            >
+              <img
+                src="./images/slider/slideri2.png"
+                class="w-full h-auto md:h-[408px]"
+                alt=""
+              />
+              <div class="w-full md:w-[428px] text-center p-2">
+                <p
+                  style="font-family: moster_regular"
+                  class="font-[400] text-[16px] sm:text-[18px] md:text-[20px] text-black"
+                >
+                  Large, usable podium greens (kids play, pet-friendly pockets,
+                  sit-outs)
+                </p>
+              </div>
+            </div>
+
+            <!-- Card Template -->
+            <div
+              class="flex flex-col items-center bg-white text-black h-auto md:h-[478px] min-w-[80%] sm:min-w-[45%] md:min-w-[38.3333%] w-[598px] md:w-[598px] overflow-hidden"
+            >
+              <img
+                src="./images/slider/slideri1.png"
+                class="w-full h-auto md:h-[408px]"
+                alt=""
+              />
+              <div class="w-full md:w-[428px] text-center p-2">
+                <p
+                  style="font-family: moster_regular"
+                  class="font-[400] text-[16px] sm:text-[18px] md:text-[20px] text-black"
+                >
+                  Large, usable podium greens (kids play, pet-friendly pockets,
+                  sit-outs)
+                </p>
+              </div>
+            </div>
+
+            <!-- Repeat cards with same responsive classes -->
+            <div
+              class="flex flex-col items-center bg-white text-black h-auto md:h-[478px] min-w-[80%] sm:min-w-[45%] md:min-w-[38.3333%] w-[598px] md:w-[598px] overflow-hidden"
+            >
+              <img
+                src="./images/slider/slideri3.png"
+                class="w-full h-auto md:h-[408px]"
+                alt=""
+              />
+              <div class="w-full md:w-[428px] text-center p-2">
+                <p
+                  style="font-family: moster_regular"
+                  class="font-[400] text-[16px] sm:text-[18px] md:text-[20px] text-black"
+                >
+                  Large, usable podium greens (kids play, pet-friendly pockets,
+                  sit-outs)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Buttons -->
+          <div class="mt-7 flex justify-center items-center gap-4">
+            <button
+              id="prev"
+              class="bg-white rounded-full h-[63px] w-[62px] flex justify-center items-center text-black"
+            >
+              <svg
+                width="32"
+                height="24"
+                viewBox="0 0 32 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.939522 10.9393C0.353735 11.5251 0.353735 12.4749 0.939522 13.0607L10.4855 22.6066C11.0712 23.1924 12.021 23.1924 12.6068 22.6066C13.1926 22.0208 13.1926 21.0711 12.6068 20.4853L4.1215 12L12.6068 3.51472C13.1926 2.92893 13.1926 1.97919 12.6068 1.3934C12.021 0.807611 11.0712 0.807611 10.4855 1.3934L0.939522 10.9393ZM32.0002 12V10.5L2.00018 10.5V12V13.5L32.0002 13.5V12Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+            <button
+              id="next"
+              class="bg-white rounded-full h-[63px] w-[62px] flex justify-center items-center text-black"
+            >
+              <svg
+                width="32"
+                height="24"
+                viewBox="0 0 32 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M31.0605 10.9393C31.6463 11.5251 31.6463 12.4749 31.0605 13.0607L21.5145 22.6066C20.9288 23.1924 19.979 23.1924 19.3932 22.6066C18.8074 22.0208 18.8074 21.0711 19.3932 20.4853L27.8785 12L19.3932 3.51472C18.8074 2.92893 18.8074 1.97919 19.3932 1.3934C19.979 0.807611 20.9288 0.807611 21.5145 1.3934L31.0605 10.9393ZM-0.000183105 12L-0.000183105 10.5L29.9998 10.5V12V13.5L-0.000183105 13.5L-0.000183105 12Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Section 5 Is Starting From Here  -->
+      <section
+        class="sec5 w-screen min-h-[20vh] flex flex-col gap-20 items-center py-20 px-4 md:px-6"
+        style="
+          background-image: url(./images/s5/s5Banner.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        "
+      >
+        <div class="flex justify-center items-center text-center w-full">
+          <h1
+            style="font-family: moster_medium"
+            class="font-[500] text-[28px] sm:text-[32px] md:text-[36px] text-black"
+          >
+            Amenities
+          </h1>
+        </div>
+
+        <div
+          class="amenitiesCardsContainer flex flex-col gap-6 items-center w-full max-w-[1200px]"
+        >
+          <!-- Row 1 -->
+          <div
+            class="flex flex-wrap justify-center md:justify-between gap-4 w-full"
+          >
+            <!-- Cards -->
+            <div
+              class="bg-white w-[40%] sm:w-[167px] md:w-[167px] h-[167px] flex flex-col justify-center gap-4 items-center text-black border-[1px] border-[#EEEEEE]"
+            >
+              <img
+                src="./images/s5/icn1.png"
+                class="w-[70px] h-[70px]"
+                alt=""
+              />
+              <p
+                style="font-family: moster_medium"
+                class="font-[500] text-[16px] sm:text-[18px] text-black text-center"
+              >
+                Club & Wellness
+              </p>
+            </div>
+
+            <div
+              class="bg-white w-[40%] sm:w-[167px] md:w-[167px] h-[167px] flex flex-col justify-center gap-4 items-center text-black border-[1px] border-[#EEEEEE]"
+            >
+              <img
+                src="./images/s5/icn2.png"
+                class="w-[70px] h-[70px]"
+                alt=""
+              />
+              <p
+                style="font-family: moster_medium"
+                class="font-[500] text-[16px] sm:text-[18px] text-black text-center"
+              >
+                Sports & Outdoor
+              </p>
+            </div>
+
+            <div
+              class="bg-white w-[40%] sm:w-[167px] md:w-[167px] h-[167px] flex flex-col justify-center gap-4 items-center text-black border-[1px] border-[#EEEEEE]"
+            >
+              <img
+                src="./images/s5/icn3.png"
+                class="w-[70px] h-[70px]"
+                alt=""
+              />
+              <p
+                style="font-family: moster_medium"
+                class="font-[500] text-[16px] sm:text-[18px] text-black text-center"
+              >
+                Lifestyle
+              </p>
+            </div>
+
+            <div
+              class="bg-white w-[40%] sm:w-[167px] md:w-[167px] h-[167px] flex flex-col justify-center gap-4 items-center text-black border-[1px] border-[#EEEEEE]"
+            >
+              <img
+                src="./images/s5/icn4.png"
+                class="w-[70px] h-[70px]"
+                alt=""
+              />
+              <p
+                style="font-family: moster_medium"
+                class="font-[500] text-[16px] sm:text-[18px] text-black text-center"
+              >
+                Club & Wellness
+              </p>
+            </div>
+
+            <div
+              class="bg-white w-[40%] sm:w-[167px] md:w-[167px] h-[167px] flex flex-col justify-center gap-4 items-center text-black border-[1px] border-[#EEEEEE]"
+            >
+              <img
+                src="./images/s5/icn1.png"
+                class="w-[70px] h-[70px]"
+                alt=""
+              />
+              <p
+                style="font-family: moster_medium"
+                class="font-[500] text-[16px] sm:text-[18px] text-black text-center"
+              >
+                Club & Wellness
+              </p>
+            </div>
+
+            <div
+              class="bg-white w-[40%] sm:w-[167px] md:w-[167px] h-[167px] flex flex-col justify-center gap-4 items-center text-black border-[1px] border-[#EEEEEE]"
+            >
+              <img
+                src="./images/s5/icn1.png"
+                class="w-[70px] h-[70px]"
+                alt=""
+              />
+              <p
+                style="font-family: moster_medium"
+                class="font-[500] text-[16px] sm:text-[18px] text-black text-center"
+              >
+                Club & Wellness
+              </p>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div
+            class="flex flex-wrap justify-center md:justify-between gap-4 w-full"
+          >
+            <!-- Cards -->
+            <div
+              class="bg-white w-[40%] sm:w-[167px] md:w-[167px] h-[167px] flex flex-col justify-center gap-4 items-center text-black border-[1px] border-[#EEEEEE]"
+            >
+              <img
+                src="./images/s5/icn1.png"
+                class="w-[70px] h-[70px]"
+                alt=""
+              />
+              <p
+                style="font-family: moster_medium"
+                class="font-[500] text-[16px] sm:text-[18px] text-black text-center"
+              >
+                Safety & Services
+              </p>
+            </div>
+
+            <div
+              class="bg-white w-[40%] sm:w-[167px] md:w-[167px] h-[167px] flex flex-col justify-center gap-4 items-center text-black border-[1px] border-[#EEEEEE]"
+            >
+              <img
+                src="./images/s5/icn1.png"
+                class="w-[70px] h-[70px]"
+                alt=""
+              />
+              <p
+                style="font-family: moster_medium"
+                class="font-[500] text-[16px] sm:text-[18px] text-black text-center"
+              >
+                Swimming
+              </p>
+            </div>
+
+            <div
+              class="bg-white w-[40%] sm:w-[167px] md:w-[167px] h-[167px] flex flex-col justify-center gap-4 items-center text-black border-[1px] border-[#EEEEEE]"
+            >
+              <img
+                src="./images/s5/icn1.png"
+                class="w-[70px] h-[70px]"
+                alt=""
+              />
+              <p
+                style="font-family: moster_medium"
+                class="font-[500] text-[16px] sm:text-[18px] text-black text-center"
+              >
+                Power backup
+              </p>
+            </div>
+
+            <div
+              class="bg-white w-[40%] sm:w-[167px] md:w-[167px] h-[167px] flex flex-col justify-center gap-4 items-center text-black border-[1px] border-[#EEEEEE]"
+            >
+              <img
+                src="./images/s5/icn1.png"
+                class="w-[70px] h-[70px]"
+                alt=""
+              />
+              <p
+                style="font-family: moster_medium"
+                class="font-[500] text-[16px] sm:text-[18px] text-black text-center"
+              >
+                Club & Wellness
+              </p>
+            </div>
+
+            <div
+              class="bg-white w-[40%] sm:w-[167px] md:w-[167px] h-[167px] flex flex-col justify-center gap-4 items-center text-black border-[1px] border-[#EEEEEE]"
+            >
+              <img
+                src="./images/s5/icn1.png"
+                class="w-[70px] h-[70px]"
+                alt=""
+              />
+              <p
+                style="font-family: moster_medium"
+                class="font-[500] text-[16px] sm:text-[18px] text-black text-center"
+              >
+                Club & Wellness
+              </p>
+            </div>
+
+            <div
+              class="bg-white w-[40%] sm:w-[167px] md:w-[167px] h-[167px] flex flex-col justify-center gap-4 items-center text-black border-[1px] border-[#EEEEEE]"
+            >
+              <img
+                src="./images/s5/icn1.png"
+                class="w-[70px] h-[70px]"
+                alt=""
+              />
+              <p
+                style="font-family: moster_medium"
+                class="font-[500] text-[16px] sm:text-[18px] text-black text-center"
+              >
+                Club & Wellness
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Section 6 Is Starting From Here  -->
+      <section
+        class="sec6 w-screen flex justify-center items-center py-20 px-4 md:px-0"
+      >
+        <div
+          class="w-full max-w-[1266px] flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-0"
+        >
+          <!-- Left Side Text Content Div -->
+          <div class="left w-full md:w-[513px] flex flex-col gap-4">
+            <!-- Top Content -->
+            <div class="flex flex-col gap-4 md:gap-[19px] w-full">
+              <h2
+                style="font-family: moster_semibold"
+                class="font-[600] text-[28px] sm:text-[32px] md:text-[36px] text-black"
+              >
+                Location
+              </h2>
+              <div
+                style="font-family: moster_medium"
+                class="w-full md:w-[513px] h-[52px] bg-[#BF1E2E] text-white flex font-[500] text-[16px] sm:text-[18px] md:text-[18px] items-center px-4 md:px-0 md:pl-4"
+              >
+                Sector 22D, Yamuna Expressway, YEIDA
+              </div>
+              <div class="pl-4 md:pl-6">
+                <ul
+                  style="font-family: moster_regular"
+                  class="list-disc list-outside font-[400] text-[16px] sm:text-[18px] md:text-[20px] flex flex-col gap-4 md:gap-[19px]"
+                >
+                  <li>Yamuna Expressway</li>
+                  <li>Noida International Airport (Jewar):</li>
+                  <li>Planned Media/Film City & Institutional Zones</li>
+                  <li>Social Infrastructure:</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Bottom Content -->
+            <div class="flex flex-col gap-4 md:gap-[19px] w-full mt-4">
+              <h2
+                style="font-family: moster_regular"
+                class="font-[600] text-[28px] sm:text-[32px] md:text-[36px] text-black"
+              >
+                Why this corridor
+              </h2>
+              <div class="pl-4 md:pl-6">
+                <ul
+                  style="font-family: moster_regular"
+                  class="list-disc list-outside font-[400] text-[16px] sm:text-[18px] md:text-[20px] flex flex-col gap-4 md:gap-[19px]"
+                >
+                  <li>
+                    Major public investment (airport, industrial & logistics
+                    nodes)
+                  </li>
+                  <li>
+                    High-capacity arterial roads; future metro/rapid transit
+                    under planning
+                  </li>
+                  <li>Early-mover advantage in a growth micro-market</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side Map Div -->
+          <div
+            class="map w-full md:w-[726px] h-[400px] sm:h-[500px] md:h-[588px]"
+          >
+            <img
+              src="./images/s6/map-2.png"
+              class="w-full h-full object-cover"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7 Gallery -->
+      <section
+        class="s7 w-screen min-h-[10vh] flex flex-col items-center px-4 py-10 bg-gray-50"
+      >
+        <!-- Heading -->
+        <div class="mb-8 text-center">
+          <h2
+            style="font-family: moster_medium"
+            class="font-medium text-3xl md:text-4xl lg:text-5xl text-black"
+          >
+            Gallery
+          </h2>
+        </div>
+
+        <!-- Grid Gallery -->
+        <div
+          class="imgGallery w-full max-w-[1216px] grid grid-cols-1 lg:grid-cols-3 gap-4"
+        >
+          <!-- Left Big Image -->
+          <div class="lftImg lg:col-span-1 h-64 md:h-96 lg:h-full relative">
+            <button
+              class="font-[600] absolute right-6 top-6 text-[20px] w-[155px] h-[45px] rounded-[4px] bg-black border-none text-white"
+            >
+              Exteriors
+            </button>
+            <img
+              src="./images/s7/s1.png"
+              class="w-full h-full object-cover shadow-lg"
+              alt="Gallery Image 1"
+            />
+          </div>
+
+          <!-- Right Images Grid -->
+          <div class="rghtImgs lg:col-span-2 grid grid-cols-2 gap-4">
+            <div class="relative">
+              <button
+                style="font-family: moster_semibold"
+                class="font-[600] absolute right-6 top-6 text-[20px] w-[155px] h-[45px] rounded-[4px] bg-black border-none text-white"
+              >
+                Podium Life
+              </button>
+              <img
+                src="./images/s7/s2.png"
+                class="w-full h-40 md:h-52 lg:h-[342px] object-cover shadow-md"
+                alt="Gallery Image 2"
+              />
+            </div>
+            <div class="relative">
+              <button
+                style="font-family: moster_semibold"
+                class="font-[600] absolute right-6 top-6 text-[20px] w-[155px] h-[45px] rounded-[4px] bg-black border-none text-white"
+              >
+                Clubhouse
+              </button>
+              <img
+                src="./images/s7/s3.png"
+                class="w-full h-40 md:h-52 lg:h-[342px] object-cover shadow-md"
+                alt="Gallery Image 3"
+              />
+            </div>
+            <div class="relative">
+              <button
+                style="font-family: moster_semibold"
+                class="font-[600] absolute right-6 top-6 text-[20px] w-[155px] h-[45px] rounded-[4px] bg-black border-none text-white"
+              >
+                Residences
+              </button>
+              <img
+                src="./images/s7/s4.png"
+                class="w-full h-40 md:h-52 lg:h-[342px] object-cover shadow-md"
+                alt="Gallery Image 4"
+              />
+            </div>
+            <div class="relative">
+              <button
+                style="font-family: moster_semibold"
+                class="font-[600] absolute right-6 top-6 text-[20px] w-[155px] h-[45px] rounded-[4px] bg-black border-none text-white"
+              >
+                Progress
+              </button>
+              <img
+                src="./images/s7/s5.png"
+                class="w-full h-40 md:h-52 lg:h-[342px] object-cover shadow-md"
+                alt="Gallery Image 5"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8 Is Starting From Here  -->
+      <section
+        class="sec8 w-screen min-h-[468px] text-white flex flex-col gap-10 sm:gap-[43px] items-center justify-center bg-[#0B2954] px-4 py-8 md:py-0"
+      >
+        <h2
+          style="font-family: moster_semibold"
+          class="font-[600] text-[28px] sm:text-[32px] md:text-[36px] text-center"
+        >
+          Choose an Eldeco Home, Live Better
+        </h2>
+
+        <div
+          class="w-full flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-0"
+        >
+          <div
+            class="card w-full sm:w-[360px] border-b sm:border-b-0 sm:border-r-[1px] border-[#FFFFFF99] h-[200px] flex flex-col justify-center items-center"
+          >
+            <h2
+              style="font-family: moster_regular"
+              class="font-[400] text-[28px] sm:text-[32px] md:text-[36px]"
+            >
+              200+
+            </h2>
+            <p
+              style="font-family: moster_semibold"
+              class="font-[600] text-[28px] sm:text-[32px] md:text-[36px]"
+            >
+              Projects
+            </p>
+          </div>
+
+          <div
+            class="card w-full sm:w-[360px] border-b sm:border-b-0 sm:border-r-[1px] border-[#FFFFFF99] h-[200px] flex flex-col justify-center items-center"
+          >
+            <h2
+              style="font-family: moster_regular"
+              class="font-[400] text-[28px] sm:text-[32px] md:text-[36px]"
+            >
+              40+
+            </h2>
+            <p
+              style="font-family: moster_semibold"
+              class="font-[600] text-[28px] sm:text-[32px] md:text-[36px]"
+            >
+              Years
+            </p>
+          </div>
+
+          <div
+            class="card w-full sm:w-[360px] border-b sm:border-b-0 sm:border-r-[1px] border-[#FFFFFF99] h-[200px] flex flex-col justify-center items-center"
+          >
+            <h2
+              style="font-family: moster_regular"
+              class="font-[400] text-[28px] sm:text-[32px] md:text-[36px]"
+            >
+              30000+
+            </h2>
+            <p
+              style="font-family: moster_semibold"
+              class="font-[600] text-[28px] sm:text-[32px] md:text-[36px]"
+            >
+              Homes
+            </p>
+          </div>
+
+          <div
+            class="card w-full sm:w-[360px] h-[200px] flex flex-col justify-center items-center"
+          >
+            <h2
+              style="font-family: moster_regular"
+              class="font-[400] text-[28px] sm:text-[32px] md:text-[36px]"
+            >
+              20+
+            </h2>
+            <p
+              style="font-family: moster_semibold"
+              class="font-[600] text-[28px] sm:text-[32px] md:text-[36px]"
+            >
+              Cities
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9 Is Starting From Here  -->
+      <section
+        class="sec9 w-screen min-h-screen flex justify-center items-center px-4 py-10"
+        style="
+          background-image: url(./images/s9/sec9.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        "
+      >
+        <div
+          class="w-full max-w-[1307px] flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 lg:gap-0"
+        >
+          <!-- Left Side Content Div -->
+          <div
+            class="leftSideContainer w-full lg:w-[574px] flex flex-col justify-center pr-0 lg:pr-10 gap-6 lg:gap-[26px] h-auto lg:h-[409px] text-black border-t-[9px] border-b-[9px] border-[#D04667] md:py-0 py-8 md:px-0 px-2"
+          >
+            <h2
+              style="font-family: moster_semibold"
+              class="font-[600] text-[28px] sm:text-[36px] md:text-[48px] text-black"
+            >
+              Get in Touch
+            </h2>
+            <p
+              style="font-family: moster_regular"
+              class="text-black font-[400] text-[16px] sm:text-[18px] md:text-[20px]"
+            >
+              If you would like to know more details or something specific, feel
+              free to contact us.
+            </p>
+            <p
+              style="font-family: moster_regular"
+              class="text-black font-[400] text-[16px] sm:text-[18px] md:text-[20px]"
+            >
+              Our site representative will give you a call back.
+            </p>
+          </div>
+
+          <!-- Right Side Form Div -->
+          <div
+            class="w-full lg:w-[691px] h-auto flex justify-center items-center bg-white text-black flex-col gap-8 lg:gap-[35px] p-4 lg:p-0"
+          >
+            <form
+              class="w-full lg:w-[611px] flex flex-col gap-6 lg:gap-[27px] py-4 md:py-10"
+            >
+              <input
+                type="text"
+                class="shadow-md shadow-[#7070701A] rounded-[4px] focus:outline-none border-none text-black pl-4 lg:pl-[17px] h-[56px] w-full"
+                placeholder="*Name"
+              />
+              <input
+                type="text"
+                class="shadow-md shadow-[#7070701A] rounded-[4px] focus:outline-none border-none text-black pl-4 lg:pl-[17px] h-[56px] w-full"
+                placeholder="*Email"
+              />
+              <input
+                type="text"
+                class="shadow-md shadow-[#7070701A] rounded-[4px] focus:outline-none border-none text-black pl-4 lg:pl-[17px] h-[56px] w-full"
+                placeholder="*Phone"
+              />
+              <textarea
+                class="shadow-md resize-none shadow-[#7070701A] rounded-[4px] focus:outline-none border-none text-black pl-4 lg:pl-[17px] h-[134px] w-full"
+                placeholder="*Message"
+              ></textarea>
+              <label class="flex gap-3 items-center" for="">
+                <input type="checkbox" class="w-[16px] h-[14px]" />
+                <p class="font-[400] text-[14px] sm:text-[16px]">
+                  I accept the Terms & Conditions.
+                </p>
+              </label>
+
+              <button
+                style="font-family: moster_semibold"
+                class="w-full sm:w-[174px] h-[48px] bg-black text-white text-[16px] font-[500]"
+              >
+                Contact Us
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="w-screen bg-[#011019] flex flex-col justify-center items-center gap-4 sm:gap-[10px] text-white px-4 py-6 sm:py-8"
+    >
+      <!-- Top White Box -->
+      <div
+        class="w-full max-w-[579px] h-auto sm:h-[92px] bg-white text-black flex flex-col justify-center text-center items-center font-[600] text-[16px] sm:text-[20px] px-2 py-2 sm:py-0"
+      >
+        UP RERA REG NO. UPRERAPRJ752382/09/2025 WEBSITE: WWW.UP-RERA.IN
+      </div>
+
+      <!-- Disclaimer Heading -->
+      <h2
+        class="font-[600] text-[24px] sm:text-[36px] text-center mt-4 sm:mt-0"
+      >
+        Disclaimer
+      </h2>
+
+      <!-- Disclaimer Text -->
+      <p
+        class="font-[400] text-[14px] sm:text-[16px] max-w-full sm:max-w-6xl text-center px-2 sm:px-0"
+      >
+        The content and visuals in this advertisement are solely an artistic
+        rendering for illustrative purposes and are not to scale, it does not
+        constitute a legal offer or forms part of any legally binding agreement.
+        The promoter of the project clarifies that the information provided
+        herein are indicative in nature. Intending purchasers are advised to
+        verify all the details independently with the respective sales team of
+        promoter of the project regarding plans, specifications, terms of sales
+        and payments and other relevant details independently before making any
+        purchase decision regarding any unit in the project.
+      </p>
+    </footer>
+
+    <!-- Bottom Bar -->
+    <div
+      class="w-screen bg-black h-[66px] flex justify-center items-center font-[400] text-[14px] sm:text-[16px] text-[#FFFFFF66] px-4"
+    >
+      <p>Disclaimer & Privacy Policy</p>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
